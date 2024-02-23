@@ -1,0 +1,1150 @@
+$color_1: rgba(126, 126, 130, 1);
+$color_2: rgba(27, 28, 33, 1);
+$font-family_1: TT Lakes Bolds;
+$font-family_2: TT Lakes Regular;
+$background-color_1: rgba(248, 248, 248, 1);
+$background-color_2: #ffffff;
+$background-color_3: #f8f8f8;
+$background-color_4: gray;
+$background-color_5: #fff;
+
+html {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+@media screen and (min-width: 0px) and (max-width: 767.5px) {
+  .wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: $background-color_1;
+  }
+  .header {
+    display: flex;
+    padding: 18px 16px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: $background-color_2;
+    border: 0;
+    border-bottom: 1px solid rgba(217, 255, 245, 1);
+    &__menu-and-cps-block {
+      display: flex;
+      gap: 16px;
+    }
+    &__repair-and-search-block {
+      display: flex;
+      gap: 16px;
+    }
+    &__menu-and-cps-block--button--menu {
+      display: flex;
+      align-self: center;
+      background-image: url(../images/svg-1.svg);
+      width: 40px;
+      height: 40px;
+      border: none;
+      background-color: $background-color_2;
+      transition: opacity 0.5s ease;
+      &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    }
+    &__menu-and-cps-block--button--cps {
+      background-image: url(../images/svg.svg);
+      width: 98.55px;
+      height: 50.81px;
+      border: none;
+      background-color: $background-color_2;
+      background-repeat: no-repeat;
+    }
+    &__repair-and-search-block--button--repair {
+      &::before {
+        content: url(../images/line.svg);
+        width: 2px;
+        height: 32px;
+        display: block;
+        margin-left: -26px;
+        cursor: default;
+        pointer-events: none;
+      }
+      width: 40px;
+      height: 40px;
+      background-image: url(../images/svg-2.svg);
+      border: none;
+      background-color: $background-color_2;
+      transition: opacity 0.5s ease;
+      &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    }
+    &__repair-and-search-block--button--search {
+      width: 40px;
+      height: 40px;
+      background-image: url(../images/svg-3.svg);
+      border: none;
+      background-color: $background-color_2;
+      transition: opacity 0.5s ease;
+      &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    }
+  }
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: $background-color_3;
+  }
+  @font-face {
+    font-family: $font-family_1;
+    src: url(../fonts/TTLakes-Bold.ttf);
+  }
+  @font-face {
+    font-family: $font-family_2;
+    src: url(../fonts/TTLakes-Regular.ttf);
+  }
+  .title {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-family: $font-family_1;
+    letter-spacing: -0.6px;
+    font-size: 28px;
+    &::before {
+      content: url(../images/blue-line.svg);
+      width: 4px;
+      height: 40px;
+      margin-right: 4%;
+    }
+  }
+  .scroll {
+    overflow-y: hidden;
+    padding-bottom: 2px;
+    margin-left: 16px;
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    white-space: pre;
+    &::-webkit-scrollbar {
+      width: 12px;
+      height: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #f8f8f8;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $background-color_4;
+      border-radius: 20px;
+      border: 3px solid #f8f8f8;
+    }
+    &__repairs {
+      padding: 9px;
+      font-family: $font-family_2;
+      color: $color_1;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      border: none;
+      background-color: $background-color_1;
+      &:hover {
+        padding: 7px;
+        border: 2px solid rgba(184, 255, 236, 1);
+        background-color: $background-color_2;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        color: $color_1;
+        font-family: $font-family_2;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    }
+    &__addition {
+      padding: 9px;
+      font-family: $font-family_2;
+      color: $color_1;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      border: none;
+      background-color: $background-color_1;
+      &:hover {
+        padding: 7px;
+        border: 2px solid rgba(184, 255, 236, 1);
+        background-color: $background-color_2;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        color: $color_1;
+        font-family: $font-family_2;
+        font-size: 16px;
+      }
+    }
+    &__prices {
+      padding: 9px;
+      font-family: $font-family_2;
+      color: $color_1;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      border: none;
+      background-color: $background-color_1;
+      &:hover {
+        padding: 7px;
+        border: 2px solid rgba(184, 255, 236, 1);
+        background-color: $background-color_2;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        color: $color_1;
+        font-family: $font-family_2;
+        font-size: 16px;
+      }
+    }
+    &__prices-on-service {
+      padding: 9px 20px;
+      font-family: $font-family_2;
+      color: $color_1;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      border: none;
+      background-color: $background-color_1;
+      &:hover {
+        padding: 7px 18px;
+        border: 2px solid rgba(184, 255, 236, 1);
+        background-color: $background-color_2;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        color: $color_1;
+        font-family: $font-family_2;
+        font-size: 16px;
+      }
+    }
+    &__special-prices {
+      padding: 9px;
+      font-family: $font-family_2;
+      color: $color_1;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      border: none;
+      background-color: $background-color_1;
+      &:hover {
+        padding: 7px;
+        border: 2px solid rgba(184, 255, 236, 1);
+        background-color: $background-color_2;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        color: $color_1;
+        font-family: $font-family_2;
+        font-size: 16px;
+      }
+    }
+    &__adresses {
+      padding: 9px;
+      font-family: $font-family_2;
+      color: $color_1;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      border: none;
+      background-color: $background-color_1;
+      &:hover {
+        padding: 7px;
+        border: 2px solid rgba(184, 255, 236, 1);
+        background-color: $background-color_2;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        color: $color_1;
+        font-family: $font-family_2;
+        font-size: 16px;
+      }
+    }
+    &__reviews {
+      padding: 9px;
+      font-family: $font-family_2;
+      color: $color_1;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      border: none;
+      background-color: $background-color_1;
+      &:hover {
+        padding: 7px;
+        border: 2px solid rgba(184, 255, 236, 1);
+        background-color: $background-color_2;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        color: $color_1;
+        font-family: $font-family_2;
+        font-size: 16px;
+      }
+    }
+  }
+  body {
+    &::-webkit-scrollbar {
+      width: 12px;
+      height: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #f8f8f8;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $background-color_4;
+      border-radius: 20px;
+      border: 3px solid #f8f8f8;
+    }
+  }
+  .first-block {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    width: 100%;
+    &__article {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      width: 100%;
+      font-size: 14px;
+      color: $color_2;
+      font-family: $font-family_2;
+      text-align: left;
+      letter-spacing: 0.2px;
+      line-height: 18px;
+    }
+    &__article--text {
+      width: 90%;
+      margin-bottom: 0;
+      margin-left: 16px;
+    }
+    &__image {
+      max-width: 767.5px;
+      width: 100%;
+    }
+    &__article--desktop--text {
+      display: none;
+    }
+    &__article--tablet--text {
+      display: none;
+    }
+  }
+  .read {
+    display: flex;
+    align-items: center;
+    white-space: pre;
+    background-color: $background-color_3;
+    border: none;
+    font-size: 16px;
+    font-family: $font-family_2;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    &:hover {
+      opacity: 0.5;
+    }
+    &::before {
+      content: url(../images/arrows-1.svg);
+      margin-right: 5%;
+      margin-top: 3%;
+    }
+  }
+  .phone-image {
+    width: 100%;
+    max-height: 300px;
+  }
+  .header__tablet-block--buttons--profile {
+    display: none;
+  }
+  .header__tablet-block--buttons--message {
+    display: none;
+  }
+  .header__tablet-block--buttons--phone {
+    display: none;
+  }
+  .read_tablet_only {
+    display: none;
+  }
+  .desktop {
+    display: none;
+  }
+  .header__block--tablet {
+    display: none;
+  }
+  .header__tablet-block--buttons {
+    display: none;
+  }
+  .header__repair-and-search-block--tablet {
+    display: none;
+  }
+}
+@media screen and (min-width: 767.6px) and (max-width: 1119.5px) {
+  .wrapper {
+    width: 100%;
+    min-width: 320px;
+    height: 100vh;
+    background-color: $background-color_1;
+  }
+  .header {
+    display: flex;
+    width: 100%;
+    min-width: 320px;
+    padding: 18px 24px;
+    background-color: $background-color_2;
+    border: 0;
+    border-bottom: 1px solid rgba(217, 255, 245, 1);
+    justify-content: space-between;
+  }
+  .header__menu-and-cps-block--button--menu {
+    background-image: url(../images/svg-1.svg);
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: $background-color_2;
+    top: 27%;
+    transition: opacity 0.5s ease;
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+  .header__menu-and-cps-block--button--cps {
+    background-image: url(../images/svg.svg);
+    width: 98.55px;
+    height: 50.81px;
+    border: none;
+    background-color: $background-color_2;
+    background-repeat: no-repeat;
+    &::before {
+      content: url(../images/line.svg);
+      width: 2px;
+      height: 32px;
+      display: block;
+      margin-left: -22px;
+    }
+  }
+  .header__repair-and-search-block--button--search {
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/svg-3.svg);
+    border: none;
+    background-color: $background-color_2;
+    transition: opacity 0.5s ease;
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+  .header__repair-and-search-block--button--repair {
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/svg-2.svg);
+    border: none;
+    background-color: $background-color_2;
+    transition: opacity 0.5s ease;
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+    &::before {
+      content: url(../images/line.svg);
+      width: 2px;
+      height: 32px;
+      display: block;
+      margin-left: -24px;
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+  .header__tablet-block--buttons--profile {
+    background-image: url(../images/profile.svg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: $background-color_5;
+    transition: opacity 0.5s ease;
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+  .header__tablet-block--buttons--message {
+    background-image: url(../images/message.svg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: $background-color_5;
+    transition: opacity 0.5s ease;
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+  .header__tablet-block--buttons--phone {
+    background-image: url(../images/phone.svg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: $background-color_5;
+    transition: opacity 0.5s ease;
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+  .main {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: $background-color_3;
+  }
+  @font-face {
+    font-family: $font-family_1;
+    src: url(../fonts/TTLakes-Bold.ttf);
+    font-family: $font-family_2;
+    src: url(../fonts/TTLakes-Regular.ttf);
+  }
+  .title {
+    margin-bottom: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-family: $font-family_1;
+    letter-spacing: -0.6px;
+    font-size: 28px;
+    &::before {
+      content: url(../images/blue-line.svg);
+      width: 4px;
+      height: 40px;
+      margin-right: 2%;
+    }
+  }
+  .scroll {
+    overflow-y: hidden;
+    padding-bottom: 2px;
+    margin-left: 24px;
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    white-space: pre;
+    &::-webkit-scrollbar {
+      width: 12px;
+      height: 8px;
+      width: 12px;
+      height: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #f8f8f8;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $background-color_4;
+      border-radius: 20px;
+      border: 3px solid #f8f8f8;
+    }
+  }
+  .scroll__repairs {
+    padding: 9px;
+    font-family: $font-family_2;
+    color: $color_1;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: $background-color_1;
+    &:hover {
+      padding: 7px;
+      border: 2px solid rgba(184, 255, 236, 1);
+      background-color: $background-color_2;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      color: $color_1;
+      font-family: $font-family_2;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+  .scroll__addition {
+    padding: 9px;
+    font-family: $font-family_2;
+    color: $color_1;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: $background-color_1;
+    &:hover {
+      padding: 7px;
+      border: 2px solid rgba(184, 255, 236, 1);
+      background-color: $background-color_2;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      color: $color_1;
+      font-family: $font-family_2;
+      font-size: 16px;
+    }
+  }
+  .scroll__prices {
+    padding: 9px;
+    font-family: $font-family_2;
+    color: $color_1;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: $background-color_1;
+    &:hover {
+      padding: 7px;
+      border: 2px solid rgba(184, 255, 236, 1);
+      background-color: $background-color_2;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      color: $color_1;
+      font-family: $font-family_2;
+      font-size: 16px;
+    }
+  }
+  .scroll__prices-on-service {
+    padding: 9px 20px;
+    font-family: $font-family_2;
+    color: $color_1;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: $background-color_1;
+    &:hover {
+      padding: 7px 18px;
+      border: 2px solid rgba(184, 255, 236, 1);
+      background-color: $background-color_2;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      color: $color_1;
+      font-family: $font-family_2;
+      font-size: 16px;
+    }
+  }
+  .scroll__special-prices {
+    padding: 9px;
+    font-family: $font-family_2;
+    color: $color_1;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: $background-color_1;
+    &:hover {
+      padding: 7px;
+      border: 2px solid rgba(184, 255, 236, 1);
+      background-color: $background-color_2;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      color: $color_1;
+      font-family: $font-family_2;
+      font-size: 16px;
+    }
+  }
+  .scroll__adresses {
+    padding: 9px;
+    font-family: $font-family_2;
+    color: $color_1;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: $background-color_1;
+    &:hover {
+      padding: 7px;
+      border: 2px solid rgba(184, 255, 236, 1);
+      background-color: $background-color_2;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      color: $color_1;
+      font-family: $font-family_2;
+      font-size: 16px;
+    }
+  }
+  .scroll__reviews {
+    padding: 9px;
+    font-family: $font-family_2;
+    color: $color_1;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: $background-color_1;
+    &:hover {
+      padding: 7px;
+      border: 2px solid rgba(184, 255, 236, 1);
+      background-color: $background-color_2;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      color: $color_1;
+      font-family: $font-family_2;
+      font-size: 16px;
+    }
+  }
+  body {
+    &::-webkit-scrollbar {
+      width: 12px;
+      height: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #f8f8f8;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $background-color_4;
+      border-radius: 20px;
+      border: 3px solid #f8f8f8;
+    }
+  }
+  .first-block {
+    width: 100%;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-around;
+  }
+  .first-block__article {
+    width: 40%;
+    font-size: 14px;
+    color: $color_2;
+    font-family: $font-family_2;
+    text-align: left;
+    letter-spacing: 0.2px;
+    line-height: 18px;
+  }
+  .first-block__article--text {
+    margin: 0;
+  }
+  .read {
+    display: flex;
+    align-items: center;
+    white-space: pre;
+    background-color: $background-color_3;
+    border: none;
+    font-size: 16px;
+    font-family: $font-family_2;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    &:hover {
+      opacity: 0.5;
+    }
+    &::before {
+      content: url(../images/arrows-1.svg);
+      margin-right: 5%;
+      margin-top: 3%;
+    }
+  }
+  .first-block__image {
+    width: 46%;
+  }
+  .header__block--tablet {
+    display: flex;
+    gap: 34px;
+    align-items: center;
+  }
+  .header__menu-and-cps-block {
+    display: flex;
+    gap: 34px;
+    align-items: center;
+  }
+  .header__tablet-block--buttons {
+    display: flex;
+    gap: 16px;
+  }
+  .header__repair-and-search-block--tablet {
+    display: flex;
+    gap: 16px;
+  }
+  .phone-image {
+    display: none;
+  }
+  .desktop {
+    display: none;
+  }
+  .header__repair-and-search_block {
+    display: none;
+  }
+  .first-block__article--desktop--text {
+    display: none;
+    margin-top: 0;
+  }
+  .header__repair-and-search-block {
+    display: none;
+  }
+}
+@media screen and (min-width: 1119.6px) {
+  body {
+    background-color: $background-color_3;
+    &::-webkit-scrollbar {
+      width: 12px;
+      height: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #f8f8f8;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $background-color_4;
+      border-radius: 20px;
+      border: 3px solid #f8f8f8;
+    }
+  }
+  .title {
+    display: none;
+  }
+  .phone-image {
+    display: none;
+  }
+  .header {
+    display: none;
+  }
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  @font-face {
+    font-family: $font-family_1;
+    src: url(../fonts/TTLakes-Bold.ttf);
+    font-family: $font-family_2;
+    src: url(../fonts/TTLakes-Regular.ttf);
+  }
+  .desktop {
+    width: 100%;
+  }
+  .desktop__header {
+    display: flex;
+    width: 100%;
+    margin-top: 42px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .desktop__header--title {
+    gap: 2.5vw;
+    display: flex;
+    align-items: center;
+    font-family: $font-family_1;
+    letter-spacing: -0.6px;
+    font-size: 28px;
+    margin: 0;
+    white-space: nowrap;
+    &::before {
+      content: url(../images/blue-line.svg);
+      width: 4px;
+      height: 40px;
+      margin-right: 5%;
+    }
+  }
+  .desktop__header--send-message--button {
+    display: flex;
+    align-items: center;
+    white-space: pre;
+    background-color: $background-color_3;
+    border: none;
+    font-family: $font-family_2;
+    color: $color_2;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    font-weight: 600;
+    transition: transform 0.5s ease;
+    &::after {
+      content: url(../images/svg-2.svg);
+      width: 40px;
+      height: 40px;
+      margin-left: 5%;
+    }
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+  }
+  .desktop__header--repair-status--button {
+    display: flex;
+    align-items: center;
+    white-space: pre;
+    background-color: $background-color_3;
+    border: none;
+    font-family: $font-family_2;
+    color: $color_2;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    font-weight: 600;
+    transition: transform 0.5s ease;
+    margin-right: 25px;
+    &::after {
+      content: url(../images/svg-3.svg);
+      width: 40px;
+      height: 40px;
+      margin-left: 5%;
+    }
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+  }
+  .desktop__buttons {
+    display: flex;
+    gap: 18px;
+  }
+  .scroll {
+    margin-left: 4vw;
+    overflow-y: hidden;
+    padding-bottom: 2px;
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    white-space: pre;
+    &::-webkit-scrollbar {
+      width: 12px;
+      height: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #f8f8f8;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $background-color_4;
+      border-radius: 20px;
+      border: 3px solid #f8f8f8;
+    }
+  }
+  .scroll__repairs {
+    padding: 9px 20px;
+    font-family: $font-family_2;
+    color: $color_1;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: $background-color_1;
+    &:hover {
+      padding: 7px 18px;
+      border: 2px solid rgba(184, 255, 236, 1);
+      background-color: $background-color_2;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      color: $color_1;
+      font-family: $font-family_2;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+  .scroll__addition {
+    padding: 9px 20px;
+    font-family: $font-family_2;
+    color: $color_1;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: $background-color_1;
+    &:hover {
+      padding: 7px 18px;
+      border: 2px solid rgba(184, 255, 236, 1);
+      background-color: $background-color_2;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      color: $color_1;
+      font-family: $font-family_2;
+      font-size: 16px;
+    }
+  }
+  .scroll__prices {
+    padding: 9px 20px;
+    font-family: $font-family_2;
+    color: $color_1;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: $background-color_1;
+    &:hover {
+      padding: 7px 18px;
+      border: 2px solid rgba(184, 255, 236, 1);
+      background-color: $background-color_2;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      color: $color_1;
+      font-family: $font-family_2;
+      font-size: 16px;
+    }
+  }
+  .scroll__special-prices {
+    padding: 9px 20px;
+    font-family: $font-family_2;
+    color: $color_1;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: $background-color_1;
+    &:hover {
+      padding: 7px 18px;
+      border: 2px solid rgba(184, 255, 236, 1);
+      background-color: $background-color_2;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      color: $color_1;
+      font-family: $font-family_2;
+      font-size: 16px;
+    }
+  }
+  .scroll__adresses {
+    padding: 9px 20px;
+    font-family: $font-family_2;
+    color: $color_1;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: $background-color_1;
+    &:hover {
+      padding: 7px 18px;
+      border: 2px solid rgba(184, 255, 236, 1);
+      background-color: $background-color_2;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      color: $color_1;
+      font-family: $font-family_2;
+      font-size: 16px;
+    }
+  }
+  .scroll__reviews {
+    padding: 9px 20px;
+    font-family: $font-family_2;
+    color: $color_1;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: $background-color_1;
+    &:hover {
+      padding: 7px 18px;
+      border: 2px solid rgba(184, 255, 236, 1);
+      background-color: $background-color_2;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      color: $color_1;
+      font-family: $font-family_2;
+      font-size: 16px;
+    }
+  }
+  .scroll__prices-on-service {
+    padding: 9px 20px;
+    font-family: $font-family_2;
+    color: $color_1;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: $background-color_1;
+    &:hover {
+      padding: 7px 18px;
+      border: 2px solid rgba(184, 255, 236, 1);
+      background-color: $background-color_2;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      color: $color_1;
+      font-family: $font-family_2;
+      font-size: 16px;
+    }
+  }
+  .first-block__image {
+    max-width: 531px;
+  }
+  .first-block {
+    margin-right: 2vw;
+    margin-left: 4vw;
+    width: 100%;
+    flex-wrap: nowrap;
+    display: flex;
+    gap: 1vw;
+  }
+  .first-block__article {
+    gap: 28px;
+    width: 54%;
+    font-size: 14px;
+    color: $color_2;
+    font-family: $font-family_2;
+    text-align: left;
+    letter-spacing: 0.2px;
+    line-height: 18px;
+  }
+  .first-block__article--text {
+    margin-bottom: 0;
+  }
+  .first-block__article--tablet--text {
+    margin-bottom: 0;
+  }
+  .first-block__article--desktop--text {
+    margin-top: 0;
+  }
+  .read {
+    display: flex;
+    align-items: center;
+    white-space: pre;
+    background-color: $background-color_3;
+    border: none;
+    font-size: 16px;
+    font-family: $font-family_2;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    &:hover {
+      opacity: 0.5;
+    }
+    &::before {
+      content: url(../images/arrows-1.svg);
+      margin-right: 5%;
+      margin-top: 3%;
+    }
+  }
+}
