@@ -1,0 +1,409 @@
+$color_1: rgba(126, 126, 130, 1);
+$font-family_1: TT Lakes Regular;
+$background-color_1: #f8f8f8;
+$background-color_2: #ffffff;
+$background-color_3: rgba(255, 255, 255, 1);
+$background-color_4: #999696;
+$background-color_5: #b5b6bc;
+
+@font-face {
+  font-family: $font-family_1;
+  src: url(../fonts/TTLakes-Regular.woff2);
+}
+.slider-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 24px;
+}
+.second-swiper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.slider-header {
+  background-color: $background-color_2;
+  margin-bottom: 16px;
+  border-top: 1px solid rgba(217, 255, 245, 1);
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(248, 248, 248, 1),
+    rgba(255, 255, 255, 1)
+  );
+  &__text_p {
+    font-family: $font-family_1;
+    color: $color_1;
+    font-size: 16px;
+    margin: 0;
+    padding: 16px;
+  }
+}
+.brands {
+  &__slide {
+    display: flex;
+    min-width: 0;
+  }
+  &__slide--lenovo.swiper-slide {
+    border: 1px solid rgba(234, 234, 234, 1);
+    border-radius: 6px;
+    padding: 13px;
+    background-color: $background-color_3;
+    max-width: 240px;
+    max-height: 68px;
+    display: flex;
+    gap: 4em;
+  }
+  &__slide--lenovo {
+    &::after {
+      content: url(../images/next-button.svg);
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+    }
+  }
+  &__slide--lenovo--el {
+    display: flex;
+    align-items: center;
+  }
+  &__slide_samsung.swiper-slide {
+    display: flex;
+    gap: 4em;
+    border: 1px solid rgba(234, 234, 234, 1);
+    border-radius: 6px;
+    padding: 13px;
+    background-color: $background-color_3;
+    max-width: 240px;
+    max-height: 68px;
+  }
+  &__slide_samsung_image {
+    max-width: 108px;
+  }
+  &__slide_samsung {
+    &::after {
+      content: url(../images/next-button.svg);
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+    }
+  }
+  &__slide_samsung_el {
+    display: flex;
+    align-items: center;
+  }
+  &__slide_apple_el {
+    width: 108px;
+  }
+  &__slide_apple.swiper-slide {
+    display: flex;
+    gap: 4em;
+    border: 1px solid rgba(234, 234, 234, 1);
+    border-radius: 6px;
+    padding: 13px;
+    background-color: $background-color_3;
+    max-width: 240px;
+    max-height: 72px;
+    align-items: center;
+    max-height: 68px;
+  }
+  &__slide_apple {
+    &::after {
+      content: url(../images/next-button.svg);
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+    }
+  }
+  &__slide_bosch.swiper-slide {
+    display: flex;
+    gap: 4em;
+    border: 1px solid rgba(234, 234, 234, 1);
+    border-radius: 6px;
+    padding: 13px;
+    background-color: $background-color_3;
+    max-width: 240px;
+    max-height: 68px;
+  }
+  &__slide_bosch {
+    &::after {
+      content: url(../images/next-button.svg);
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+    }
+  }
+  &__slide_bosch_el {
+    width: 108px;
+    align-items: center;
+    display: flex;
+  }
+  &__slide_hp.swiper-slide {
+    display: flex;
+    gap: 4em;
+    border: 1px solid rgba(234, 234, 234, 1);
+    border-radius: 6px;
+    padding: 13px;
+    background-color: $background-color_3;
+    max-width: 240px;
+    max-height: 68px;
+  }
+  &__slide_hp {
+    &::after {
+      content: url(../images/next-button.svg);
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+    }
+  }
+  &__slide_hp_el {
+    width: 108px;
+    align-items: center;
+    display: flex;
+  }
+  &__slide_hp_image {
+    max-width: 108px;
+  }
+  &__slide_asus.swiper-slide {
+    display: flex;
+    gap: 4em;
+    border: 1px solid rgba(234, 234, 234, 1);
+    border-radius: 6px;
+    padding: 13px;
+    background-color: $background-color_3;
+    max-width: 240px;
+    max-height: 68px;
+  }
+  &__slide_asus {
+    &::after {
+      content: url(../images/next-button.svg);
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+    }
+  }
+  &__slide_asus_el {
+    width: 108px;
+    align-items: center;
+    display: flex;
+  }
+  &__slide_asus_image {
+    max-width: 108px;
+  }
+  &__slide--acer.swiper-slide {
+    display: flex;
+    gap: 4em;
+    border: 1px solid rgba(234, 234, 234, 1);
+    border-radius: 6px;
+    padding: 13px;
+    background-color: $background-color_3;
+    max-width: 240px;
+    max-height: 68px;
+  }
+  &__slide--acer {
+    &::after {
+      content: url(../images/next-button.svg);
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+    }
+  }
+  &__slide--acer--el {
+    width: 108px;
+    align-items: center;
+    display: flex;
+  }
+  &__slide--view.swiper-slide {
+    display: flex;
+    gap: 4em;
+    border: 1px solid rgba(234, 234, 234, 1);
+    border-radius: 6px;
+    padding: 13px;
+    background-color: $background-color_3;
+    max-width: 240px;
+    max-height: 68px;
+  }
+  &__slide--view {
+    &::after {
+      content: url(../images/next-button.svg);
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+    }
+  }
+  &__slide--view--el {
+    width: 108px;
+    align-items: center;
+    display: flex;
+  }
+  &__slide--sony.swiper-slide {
+    display: flex;
+    gap: 4em;
+    border: 1px solid rgba(234, 234, 234, 1);
+    border-radius: 6px;
+    padding: 13px;
+    background-color: $background-color_3;
+    max-width: 240px;
+    max-height: 68px;
+  }
+  &__slide--sony {
+    &::after {
+      content: url(../images/next-button.svg);
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+    }
+  }
+  &__slide--sony--el {
+    width: 108px;
+    align-items: center;
+    display: flex;
+  }
+  &__slide--dell.swiper-slide {
+    display: flex;
+    gap: 4em;
+    border: 1px solid rgba(234, 234, 234, 1);
+    border-radius: 6px;
+    padding: 13px;
+    background-color: $background-color_3;
+    max-width: 240px;
+    max-height: 68px;
+  }
+  &__slide--dell {
+    &::after {
+      content: url(../images/next-button.svg);
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+    }
+  }
+  &__slide--dell--el {
+    width: 108px;
+    align-items: center;
+    display: flex;
+  }
+  &__slide--dell--image {
+    max-width: 108px;
+  }
+  &__slide--toshiba.swiper-slide {
+    display: flex;
+    gap: 4em;
+    border: 1px solid rgba(234, 234, 234, 1);
+    border-radius: 6px;
+    padding: 13px;
+    background-color: $background-color_3;
+    max-width: 240px;
+    max-height: 68px;
+  }
+  &__slide--toshiba {
+    &::after {
+      content: url(../images/next-button.svg);
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+    }
+  }
+  &__slide--toshiba--el {
+    width: 108px;
+    align-items: center;
+    display: flex;
+  }
+  &__slide--toshiba--image {
+    max-width: 108px;
+  }
+}
+
+.swiper-pagination {
+  position: static;
+  margin-top: 10px;
+  display: flex;
+  gap: 1%;
+  justify-content: center;
+  z-index: 1;
+}
+.swiper-pagination-bullet {
+  background-color: $background-color_4;
+  height: 12px;
+  width: 12px;
+}
+.swiper-pagination-bullet-active {
+  background-color: $background-color_5;
+}
+.swiper-slide.first-slider {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+.swiper-slide.second-slider {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+.hidden {
+  display: none !important;
+}
+.showHideBtn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  white-space: pre;
+  background-color: $background-color_1;
+  border: none;
+  font-size: 16px;
+  font-family: $font-family_1;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  margin-top: 5px;
+  &:hover {
+    opacity: 0.5;
+  }
+  &::before {
+    content: url(../images/arrows-1.svg);
+    margin-right: 5%;
+    margin-top: 2px;
+  }
+}
+.showHideBtn1 {
+  &::before {
+    content: url(../images/arrows-1.svg);
+    transform: rotate(180deg);
+    margin-bottom: 7px;
+  }
+}
+.swiper-wrapper {
+  display: flex;
+}
+.swiper-container {
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  width: 750px;
+  height: max-content;
+}
+@media screen and (min-width: 768px) and (max-width: 1120px) {
+  .swiper-container.swiper3 {
+    margin-top: 16px;
+  }
+  .slider-wrapper {
+    margin-top: 46px;
+  }
+}
+@media screen and (min-width: 1120px) {
+  .swiper-container.swiper3 {
+    width: 1022px;
+    margin-top: 16px;
+  }
+  .swiper-container {
+    width: 1022px;
+  }
+  .swiper-wrapper {
+    width: 1022px;
+  }
+  .slider-wrapper {
+    margin-top: 46px;
+  }
+}
