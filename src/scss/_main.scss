@@ -3333,4 +3333,7 @@ body {
   .desktop__header--title::before {
     margin-right: 3%;
   }
+  .swiper-wrapper.third-slider {
+    flex-direction: column;
+  }
 }
